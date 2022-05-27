@@ -1,0 +1,172 @@
+//Header
+.header-container{
+	@media (max-width: $md3+px){
+		background-color: #ffffff;
+	}
+}
+
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: $headerHeight;
+	background-color: #f2efea;
+	@media (max-width: $md3+px){
+		background-color: #ffffff;
+	}
+	&__menu{
+		display: flex;
+		align-items: center;
+		z-index: 3;
+		li{
+			margin-right: 3vw;
+			font-size: 1.0625rem;
+			padding: 10px 0;
+			font-weight: 500;
+			&:last-child{
+				margin: 0;
+			}
+		}
+		& > li{
+			position: relative;
+		}
+		a{
+			color: $text;
+			display: inline-block;
+			transition: all 0.3s ease;
+			&:hover{
+				color: #B79D74;
+				&:after{
+					width: 100%;
+				}
+			}
+		}
+		.button-header{
+			&:hover{
+				color: white;
+			}
+		}
+		@media (max-width: $md3+px) {
+			display: block;
+			position: fixed;
+			overflow-y: auto;
+			top: 0;
+			right: 0;
+			width: 85%;
+			height: 100%;
+			background-color: #ffffff;
+			padding: 87px 30px 30px 52px;
+			right: -100%;
+			transition: right 0.3s ease;
+			border-radius: 20px 0 0 20px;
+
+				& > li{
+				padding: 0;
+				margin-bottom: 30px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			a{
+				color: #757577;
+				font-size: 0.938rem;
+
+			}
+			&.active{
+				right: 0;
+			}
+		}
+	}
+	&__logo{
+		max-width: 200px;
+		@media (max-width: $md3+px) {
+			max-width: 120px;
+		}
+	}
+}
+
+//Burger
+.icon-menu {
+	display: none;
+	@media (max-width: $md3+px) {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span, &:before, &:after{
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			right: 0px;
+			position: absolute;
+			height: 2px;
+			background-color: $text;
+		}
+		&:before, &:after{
+			content : " ";
+		}
+		&:before {
+			top: 0px;
+			width: 14px;
+		}
+		span{
+			width: 22px;
+		}
+		&:after {
+			top: auto;
+			bottom: 0px;
+			width: 11px;
+		}
+		&.active {
+			span {
+				transform: scale(0);
+				width: 100%;
+			}
+			&:before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+				width: 100%;
+			}
+			&:after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+				width: 100%;
+			}
+		}
+	}
+}
+
+.button-menu-wrap{
+	@media (max-width: $md3+px){
+		a{
+			margin-top: 100px;
+			background-color: #e89f2b;
+			color: white;
+			font-weight: 600;
+		}
+	}
+}
+
+._lock{
+	&::after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: black;
+		opacity: 0.4;
+	}
+}
+
+.burger-menu-logo{
+	display: none;
+	@media (max-width: $md3+px){
+		display: block;
+		max-width: 255px;
+		max-height: 105px;
+		margin-bottom: 97px;
+	}
+}

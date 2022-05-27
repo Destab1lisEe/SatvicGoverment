@@ -1,0 +1,54 @@
+.buy-title{
+	text-align: left;
+	@media(max-width: $md2+px){
+		text-align: center;
+	}
+}
+
+.edition-item-wrapper a, .edition-item{
+	@media(max-width: $md3+px){
+		margin-right: 15px;
+		margin-bottom: 0;
+	}
+}
+
+.edition-title{
+	margin: auto 0;
+	margin-right: 60px;
+	@media(max-width: $md3+px){
+		margin: 0;
+		text-align: left;
+		margin-bottom: 10px;
+		font-size: 1.063rem;
+	}
+}
+
+.edition-item-wrapper{
+	@media(max-width: 650px){
+		justify-content: flex-start;
+	}
+}
+
+.about-delivery{
+	@media(max-width: 550px){
+		grid-template-columns: 1fr 1fr;
+		padding: 20px 30px;
+	}
+}
+
+.about-author-right{
+	margin: auto 0;
+}
+
+.about-author-text {
+	max-width: initial;
+	p{
+		line-height: 34px;
+	}
+}
+
+.blog-item-title,.blog-item-subtitle{
+	@media(max-width: $md2+px){
+		text-align: left;
+	}
+}

@@ -1,0 +1,11 @@
+@@include('files/burger-menu.js', {})
+@@include('files/anchor-scroll.js', {})
+@@include('files/tabs.js', {})
+@@include('libs/swiper.min.js', {})
+@@include('libs/jquery.min.1.7.js', {})
+@@include('libs/modernizr.2.5.3.min.js', {})
+@@include('libs/turn.js', {})
+@@include('libs/turn.html4.min.js', {})
+@@include('files/jquery.arctext.js', {})
+@@include('files/script.js', {})
+
